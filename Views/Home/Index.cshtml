@@ -17,6 +17,9 @@
                     Learn how to build ASP.NET apps that can run anywhere.
                     <a class="btn btn-default btn-default" href="http://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
                         Learn More
+                        @{var model = Helpers.ModelHelper.GetModel("example.json")}
+                        
+                        @model.title
                     </a>
                 </p>
             </div>

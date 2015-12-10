@@ -50,7 +50,7 @@ namespace bb_prototype_website_razor
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Layouts/Error");
             }
 
             app.UseIISPlatformHandler();
@@ -61,7 +61,7 @@ namespace bb_prototype_website_razor
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Pages}/{action=Index}/{id?}");
             });
         }
 

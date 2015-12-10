@@ -6,7 +6,7 @@ using Microsoft.AspNet.Mvc;
 
 namespace bb_prototype_website_razor.Controllers
 {
-    public class HomeController : Controller
+    public class PagesController : Controller
     {
         public IActionResult Index()
         {
@@ -15,8 +15,6 @@ namespace bb_prototype_website_razor.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 

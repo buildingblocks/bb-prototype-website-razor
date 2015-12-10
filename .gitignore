@@ -1,0 +1,9 @@
+.sass-cache
+.tmp
+.suo
+.user
+node_modules
+packages
+bb-prototype-website-razor/bower_components
+bb-prototype-website-razor/bin
+bb-prototype-website-razor/obj

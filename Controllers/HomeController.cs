@@ -10,7 +10,7 @@ namespace bb_prototype_website_razor.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("~/Views/Pages/Index.cshtml");
         }
 
         public IActionResult About()

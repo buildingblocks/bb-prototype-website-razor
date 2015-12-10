@@ -1,0 +1,8 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@Helpers.ModelHelper.GetModel("example.json").title
+
+@Html.Partial("~/Views/Components/basic.cshtml")
+

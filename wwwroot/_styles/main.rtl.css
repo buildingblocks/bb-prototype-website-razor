@@ -221,18 +221,6 @@ th {
 ::-webkit-input-placeholder {
   color: #999;
 }
-:-moz-placeholder {
-  color: #999;
-}
-::-moz-placeholder {
-  color: #999;
-}
-:-ms-input-placeholder {
-  color: #999;
-}
-::-webkit-input-placeholder {
-  color: #999;
-}
 html {
   font-size: 100%;
   background: #fff;
@@ -301,14 +289,6 @@ body:hover .visible-grid .grid {
   position: relative;
   margin: 0 20px;
   max-width: 1180px;
-}
-.layout:before,
-.layout:after {
-  display: table;
-  content: "";
-}
-.layout:after {
-  clear: both;
 }
 .layout:before,
 .layout:after {
@@ -540,13 +520,6 @@ body:hover .visible-grid .grid {
   background-color: #ED1C24;
   background-color: rgba(237, 28, 36, 0.5);
   color: #FFF;
-}
-.lt-ie9 .visible-grid .block {
-  zoom: 1;
-  background-color: transparent;
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#80ed1c24, endColorstr=#80ed1c24)";
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#80ed1c24, endColorstr=#80ed1c24);
-  background-color: rgba(237, 28, 36, 0.5);
 }
 .lt-ie9 .visible-grid .block {
   zoom: 1;

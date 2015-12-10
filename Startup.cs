@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Mvc.Razor;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -30,6 +31,11 @@ namespace bb_prototype_website_razor
         {
             // Add framework services.
             services.AddMvc();
+            services.Configure<RazorViewEngineOptions>(options =>
+            {
+                var expander = new LayoutLocationExpander();
+                options.ViewLocationExpanders.Add(expander);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

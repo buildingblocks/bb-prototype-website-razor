@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - bb_prototype_website_razor</title>
+
+        <environment names="Development">
+            <link rel="stylesheet" href="_styles/main.css" asp-append-version="true"/>
+
+            <script src="_scripts/modernizr.js"></script>
+            <script src="_scripts/modernizr.tests.js"></script>
+        </environment>
+        @* <environment names="Staging,Production">
+            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        </environment> *@
+        <link rel="stylesheet" href="_styles/main.css" />
+
+        <script src="_scripts/modernizr.js"></script>
+        <script src="_scripts/modernizr.tests.js"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">WebApplicationBasic</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-controller="Home" asp-action="About">About</a></li>
+                        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <h2>LAYOUT B</h2>
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; 2015 - bb_prototype_website_razor</p>
+            </footer>
+        </div>
+
+        <environment names="Development">
+            <script src="_scripts/jquery.js"></script>
+            <script src="_scripts/validation.js"></script>
+            <script src="_scripts/scripts.js" asp-append-version="true"></script>
+        </environment>
+        @* <environment names="Staging,Production">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment> *@
+        <script src="_scripts/jquery.js"></script>
+        <script src="_scripts/validation.js"></script>
+        <script src="_scripts/scripts.js" asp-append-version="true"></script>
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

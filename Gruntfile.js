@@ -600,7 +600,7 @@ module.exports = function(grunt) {
 		'build_html',
 		'clean:scripts',
 		'build_scripts',
-		'jsdoc',
+		//'jsdoc',
 		'clean:styles',
 		'build_styles',
 		'modernizr',

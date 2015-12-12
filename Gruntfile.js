@@ -403,6 +403,14 @@ module.exports = function(grunt) {
 					dest: '<%= config.dist %>/<%= config.distScripts %>/'
 				}]
 			},
+			pages: {
+				files: [{
+					expand: true,
+					cwd: 'Views/Pages/',
+					src: ['*.cshtml'],
+					dest: '<%= config.dist %>/_pages'
+				}]
+			},
 			deploy: {
 				files: [{
 					expand: true,
@@ -524,6 +532,7 @@ module.exports = function(grunt) {
 		'modernizr',
 		'concat:modernizr',
 		'copy:bb',
+		'copy:pages',
 		'shell:serve'
 	]);
 	grunt.registerTask('build_production', [

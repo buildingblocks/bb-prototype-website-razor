@@ -7,12 +7,16 @@
 	<a href="#main" class="skip-link visually-hidden focusable">Skip to content</a>
 	<a href="#site-footer" class="skip-link visually-hidden focusable">Skip to footer</a>
 	<ul class="navigation-menu menu-level-0">
+		@{
+			var cssClass = "";
+		}
 		@foreach (var item in navigationJson.nav) {
 			<li>
-				@if (item.class != null) {
-					<p>test</p>
+				@try {
+					cssClass = item.navclass;
+				} catch {
 				}
-				<a href="@item.url" class="">
+				<a href="@item.url" class="@cssClass">
 					<span>@item.title</span>
 				</a>
 			</li>

@@ -13,15 +13,18 @@ namespace bb_prototype_website_razor.Controllers
             return View("~/Views/Pages/Index.cshtml");
         }
 
-        public IActionResult About()
+        public IActionResult LayoutA()
         {
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult LayoutB()
         {
-            ViewData["Message"] = "Your contact page.";
+            return View();
+        }
 
+        public IActionResult Grid()
+        {
             return View();
         }
 

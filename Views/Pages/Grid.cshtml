@@ -1,0 +1,47 @@
+@{
+    ViewBag.visibleGrid = true;
+    ViewBag.visibleBreakpoints = false;
+}
+
+@section RegionA {
+	<article class="gridblock block block-size-a">
+		<h1 class="gridblock-title">.block-size-a</h1>
+		<p class="gridblock-body">100% width at all break points.</p>
+	</article>
+
+	<article class="gridblock block block-size-b">
+		<h1 class="gridblock-title">.block-size-b</h1>
+		<p class="gridblock-body">100% width up to break-point-d. 66% over break-point-d</p>
+	</article>
+
+	@for (var i = 0; i < 4; i++) {
+		<article class="gridblock block block-size-c">
+			<h1 class="gridblock-title">.block-size-c</h1>
+			<p class="gridblock-body">100% width up to break-point-d. 33% over break-point-d</p>
+		</article>
+	}
+
+	@for (var i = 0; i < 2; i++) {
+		<article class="gridblock block block-size-d">
+			<h1 class="gridblock-title">.block-size-d</h1>
+			<p class="gridblock-body">100% width up to break-point-d. 50% over break-point-d</p>
+		</article>
+	}
+
+	<article class="gridblock block block-size-e">
+		<h1 class="gridblock-title">.block-size-e</h1>
+		<p class="gridblock-body">100% width up to break-point-d. 60% over break-point-d</p>
+	</article>
+
+	<article class="gridblock block block-size-f">
+		<h1 class="gridblock-title">.block-size-f</h1>
+		<p class="gridblock-body">100% width up to break-point-d. 40% over break-point-d</p>
+	</article>
+
+	@for (var i = 0; i < 4; i++) {
+		<article class="gridblock block block-size-g">
+			<h1 class="gridblock-title">.block-size-g</h1>
+			<p class="gridblock-body">100% width up to break-point-d. 25% over break-point-d</p>
+		</article>
+	}
+}

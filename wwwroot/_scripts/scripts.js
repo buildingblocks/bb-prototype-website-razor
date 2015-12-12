@@ -398,6 +398,7 @@ var bb = bb ? bb : {};
 			// jQuery DOM caching
 			$detector: null,
 			// CSS selectors
+			detectorClass: 'monitor-mq',
 			detectorId: 'monitor_mq',
 			// Configuration
 			detectorWidth: 0,
@@ -422,7 +423,8 @@ var bb = bb ? bb : {};
 				var self = this;
 				if (!self.$detector.length) {
 					self.$detector = $('<div />', {
-						id: self.detectorId
+						id: self.detectorId,
+						class: self.detectorClass
 					});
 					bb.settings.$body.append(self.$detector);
 				}
@@ -519,6 +521,99 @@ var bb = bb ? bb : {};
 }(jQuery));
 
 /**
+ * @file Checkbox replace
+ * @author {@link http://building-blocks.com Building Blocks}
+ */
+var bb = bb ? bb : {};
+(function($) {
+	$.extend(bb, {
+		/**
+		 * Checkbox replace related methods.
+		 * @namespace replaceCheckbox
+		 */
+		replaceCheckbox: {
+			// CSS Selectors
+			processedClass: 'checkbox-replace-input',
+			ignoreClass: 'checkbox-replace-ignore',
+			/**
+			 * Initialises checkbox replace module. Processes <inout type="checkbox">s. Creates `.checkbox-replace` markup.
+			 * @function init
+			 * @memberof replaceCheckbox
+			 */
+			init: function() {
+				var self = this;
+
+				if (bb.ltIE(9)) {
+					return;
+				}
+
+				var $inputs = $('input[type=checkbox]:not(.' + self.processedClass + '):not(.' + self.ignoreClass + ')');
+
+				$inputs.each(function() {
+					var $input = $(this),
+						$placeholder = $('<label />', {
+							'class': 'checkbox-replace',
+							'for': $input.attr('id'),
+							'role': 'presentation'
+						});
+
+					$input.addClass(self.processedClass).after($placeholder);
+				});
+			}
+		}
+	});
+	$.subscribe('pageReady ajaxLoaded', function() {
+		bb.replaceCheckbox.init();
+	});
+}(jQuery));
+
+/**
+ * @file Radio replace
+ * @author {@link http://building-blocks.com Building Blocks}
+ */
+var bb = bb ? bb : {};
+(function($) {
+	$.extend(bb, {
+		/**
+		 * Select replace related methods.
+		 * @namespace replaceRadio
+		 */
+		replaceRadio: {
+			// CSS Selectors
+			processedClass: 'radio-replace-input',
+			ignoreClass: 'radio-replace-ignore',
+			/**
+			 * Initialises radio replace module. Processes <input type="radio">s. Creates `.radio-replace` markup.
+			 * @function init
+			 * @memberof replaceRadio
+			 */
+			init: function() {
+				var self = this;
+
+				if (bb.ltIE(9)) {
+					return;
+				}
+
+				var $inputs = $('input[type=radio]:not(.' + self.processedClass + '):not(.' + self.ignoreClass + '), .checkbox-radio-style:not(.' + self.processedClass + '):not(.' + self.ignoreClass + ')');
+
+				$inputs.each(function() {
+					var $input = $(this),
+						$placeholder = $('<label />', {
+							'for': $input.attr('id'),
+							'class': 'radio-replace'
+						});
+
+					$input.addClass(self.processedClass).after($placeholder);
+				});
+			}
+		}
+	});
+	$.subscribe('pageReady ajaxLoaded', function() {
+		bb.replaceRadio.init();
+	});
+}(jQuery));
+
+/**
  * @file Select replace
  * @author {@link http://building-blocks.com Building Blocks}
  */
@@ -527,16 +622,16 @@ var bb = bb ? bb : {};
 	$.extend(bb, {
 		/**
 		 * Select replace related methods.
-		 * @namespace selectReplace
+		 * @namespace replaceSelect
 		 */
-		selectReplace: {
+		replaceSelect: {
 			// CSS Selectors
 			processedClass: 'processed',
 			numberSpinnerSelector: '.number-spinner',
 			/**
 			 * Initialises select replace module. Processes <select>s. Creates `.select-replace` markup. Binds events.
 			 * @function init
-			 * @memberof menu
+			 * @memberof replaceSelect
 			 */
 			init: function() {
 				var self = this;
@@ -564,7 +659,7 @@ var bb = bb ? bb : {};
 
 						$numberLabel.text(val);
 
-						$select.on('change.selectReplace', function() {
+						$select.on('change.replaceSelect', function() {
 							var val = $select.find('option:selected').text();
 							$numberLabel.text(val);
 						});
@@ -594,7 +689,7 @@ var bb = bb ? bb : {};
 		}
 	});
 	$.subscribe('pageReady ajaxLoaded', function() {
-		bb.selectReplace.init();
+		bb.replaceSelect.init();
 	});
 }(jQuery));
 

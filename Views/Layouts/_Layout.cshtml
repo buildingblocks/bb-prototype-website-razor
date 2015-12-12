@@ -13,19 +13,34 @@
 }
 
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]><html class="no-js ie8 lt-ie10 lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9 lt-ie10" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
     <head>
 
-        @Html.Partial("~/Views/Components/head/headApp.cshtml")
-        @Html.Partial("~/Views/Components/head/headCss.cshtml")
-        @Html.Partial("~/Views/Components/head/headFonts.cshtml")
-        @Html.Partial("~/Views/Components/head/headIcons.cshtml")
-        @Html.Partial("~/Views/Components/head/headMeta.cshtml")
-        @Html.Partial("~/Views/Components/head/headScripts.cshtml")
+        @Html.Partial("~/Views/Components/head/head.cshtml")
 
     </head>
     <body class="body @visibleGrid @visibleBreakpoints">
-        @RenderBody()
+        @Html.Partial("~/Views/Components/header/header.cshtml")
+
+        <div id="page" class="page @ViewBag.pageClass">
+            <main class="main" id="main" role="main">
+                @RenderSection("FullWidthA", required: false)
+
+                <div class="layout layout-a">
+                    <div class="region region-a">
+                        <div class="region-inner">
+                            @RenderSection("RegionA", required: false)
+                        </div>
+                    </div>
+                </div>
+
+                @RenderSection("FullWidthB", required: false)
+
+                @Html.Partial("~/Views/Components/footer/footer.cshtml")
+            </main>
+        </div>
 
         @if (ViewBag.visibleGrid) {
             @Html.Partial("~/Views/Components/other/grid.cshtml")

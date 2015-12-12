@@ -1,0 +1,21 @@
+@{
+    var navigationJson = Helpers.ModelHelper.GetModel("navigation.json");
+}
+
+<nav class="navigation" id="site-navigation" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	<a href="#site-navigation" class="skip-link visually-hidden focusable"><h4 class="navigation-title">Navigation</h4></a>
+	<a href="#main" class="skip-link visually-hidden focusable">Skip to content</a>
+	<a href="#site-footer" class="skip-link visually-hidden focusable">Skip to footer</a>
+	<ul class="navigation-menu menu-level-0">
+		@foreach (var item in navigationJson.nav) {
+			<li>
+				@if (item.class != null) {
+					<p>test</p>
+				}
+				<a href="@item.url" class="">
+					<span>@item.title</span>
+				</a>
+			</li>
+		}
+	</ul>
+</nav>

@@ -3,7 +3,15 @@
     ViewBag.visibleBreakpoints = false;
 }
 
-@Helpers.ModelHelper.GetModel("example.json").title
+@section FullWidthA {
+	<h1>Layout B</h1>
+}
 
-@Html.Partial("~/Views/Components/basic.cshtml")
+@section RegionA {
+	<h2>Region A</h2>
+	@Helpers.ModelHelper.GetModel("example.json").title
+	@Html.Partial("~/Views/Components/basic.cshtml")
+}
+
+
 

@@ -28,6 +28,11 @@ namespace bb_prototype_website_razor.Controllers
             return View();
         }
 
+        public IActionResult Styleguide()
+        {
+            return View();
+        }
+
         public IActionResult Error()
         {
             return View();

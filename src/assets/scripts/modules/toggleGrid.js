@@ -1,13 +1,14 @@
 /**
  * @file Toggle grid
- * @author {@link http://building-blocks.com Building Blocks}
+ * @author {@link https://github.com/buildingblocks Building Blocks}
  */
 var bb = bb ? bb : {};
 (function($) {
 	$.extend(bb, {
 		toggleGrid: function($object) {
 			var self = this,
-				$visibleGrid = $('.visible-grid');
+				$visibleGrid = $('.visible-grid'),
+				gridIn = false;
 
 			if (!$visibleGrid.length) {
 				return;
@@ -15,13 +16,19 @@ var bb = bb ? bb : {};
 
 			var $btn = $('<button />', {
 				'type': 'button',
-				'class': 'visible-grid-btn btn btn-style-a btn-small'
+				'class': 'visible-grid-btn btn btn-small'
 			}).text('Toggle Grid');
 
 			bb.settings.$body.append($btn);
 
 			$btn.on('click', function(event) {
-				bb.settings.$body.toggleClass('visible-grid');
+				if (gridIn) {
+					bb.settings.$body.removeClass('visible-grid-in');
+					gridIn = false;
+				} else {
+					bb.settings.$body.addClass('visible-grid-in');
+					gridIn = true;
+				}
 			});
 		}
 	});

@@ -1,22 +1,11 @@
 @using System;
 @using System.IO;
 
-@{
-	int pos = 0;
-	var filePath = "";
-	int fileLength = 0;
-}
 <h2>Pages</h2>
 <ul class="file-list">
-	@foreach(var fileName in Directory.GetFiles("wwwroot/_pages/")) {
+	@foreach(var fileName in Directory.GetFiles("Views/Pages/").Select(System.IO.Path.GetFileNameWithoutExtension).Where(x => !x.Equals("Index"))) {
 		<li class="file">
-			@{
-				pos = @fileName.LastIndexOf("/") + 1;
-				fileLength = @fileName.Length;
-				filePath = @fileName.Substring(pos, fileLength - pos);
-				filePath = filePath.Replace(".cshtml", "");
-			}
-			<a href="/Pages/@filePath">@filePath</a>
+			<a href="/Pages/@fileName">@fileName</a>
 		</li>
 	}
 </ul>

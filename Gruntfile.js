@@ -489,8 +489,11 @@ module.exports = function(grunt) {
 		},
 
 		shell: {
-			serve: {
-				command: 'dnx web'
+			dnx: {
+				command: 'dnx web',
+				options: {
+					async: true
+				}
 			}
 		}
 	});
@@ -532,8 +535,7 @@ module.exports = function(grunt) {
 		'modernizr',
 		'concat:modernizr',
 		'copy:bb',
-		'copy:pages',
-		'shell:serve'
+		'copy:pages'
 	]);
 	grunt.registerTask('build_production', [
 		'build_dev',
@@ -556,7 +558,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('serve', [
 		'clean:everything',
 		'build_dev',
-		'connect',
+		'shell:dnx',
 		'watch'
 	]);
 	// Production

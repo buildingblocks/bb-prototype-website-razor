@@ -17,5 +17,9 @@ namespace Helpers
         {
             return JObject.Parse(File.ReadAllText(ModelPath + JSONFile));
         }
+
+        public static bool Exists(this dynamic Object, string property) {
+            return Object.GetType().GetProperty(property) != null;
+        }
     }
 }

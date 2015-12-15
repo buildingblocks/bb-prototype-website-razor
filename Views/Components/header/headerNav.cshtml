@@ -1,3 +1,4 @@
+@using Helpers
 @{
     var navigationJson = Helpers.ModelHelper.GetModel("navigation.json");
 }
@@ -7,15 +8,13 @@
 	<a href="#main" class="skip-link visually-hidden focusable">Skip to content</a>
 	<a href="#site-footer" class="skip-link visually-hidden focusable">Skip to footer</a>
 	<ul class="navigation-menu menu-level-0">
-		@{
-			var cssClass = "";
-		}
 		@foreach (var item in navigationJson.nav) {
+            var cssClass = "";
+		    if (ModelHelper.Exists(item, "navClass")) {
+		        cssClass = item.navclass;
+		    }
+
 			<li>
-				@try {
-					cssClass = item.navclass;
-				} catch {
-				}
 				<a href="@item.url" class="@cssClass">
 					<span>@item.title</span>
 				</a>

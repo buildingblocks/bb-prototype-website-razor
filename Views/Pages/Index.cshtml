@@ -5,25 +5,28 @@
     var json = Helpers.ModelHelper.GetModel("project.json");
 }
 
-<div class="container">
-	<header class="header" role="banner">
-		<a href="#" class="logo">
-			<img src="/_bb/bb-logo.svg" alt="Building Blocks" width="83" height="50" />
-		</a>
-		<h1 class="project-title">
-			@json.title | @json.version
-		</h1>
-	</header>
-	<div class="main" id="main" role="main">
-		@Html.Partial("~/Views/Components/_bb/pageList.cshtml")
-		@Html.Partial("~/Views/Components/_bb/styleguideLink.cshtml")
+<div class="main" id="main" role="main">
+
+	<div class="client-image" style="background-image: url(@json.clientImage); background-size: cover; background-position: center;">
+		<img class="client-logo" src="@json.clientLogo" alt="Client Logo" height="50" />
 	</div>
-	<footer class="footer" role="contentinfo">
-		<p>&copy; Copyright 2015 Building Blocks Ltd.</p>
-	</footer>
+	<div class="site-files">
+        <div class="container">
+            <header class="header" role="banner">
+                <a href="#" class="logo">
+                    <img src="/_bb/bb-logo.svg" alt="Building Blocks" width="83" height="50" />
+                </a>
+                <h1 class="project-title">
+                    @json.title
+                </h1>
+            </header>
+            <div class="content">
+                @Html.Partial("~/Views/Components/_bb/styleguideLink.cshtml")
+                @Html.Partial("~/Views/Components/_bb/pageList.cshtml")
+            </div>
+            <footer class="footer" role="contentinfo">
+                <p>&copy; Copyright @DateTime.Now.Year Building Blocks Ltd.</p>
+            </footer>
+        </div>
+    </div>
 </div>
-
-
-
-
-

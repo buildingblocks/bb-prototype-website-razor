@@ -2,5 +2,7 @@
     "appName": "bb-prototype-website-razor",
     "title": "bb-prototype-website-razor",
     "client": "BB",
-    "images": "images"
+    "images": "images",
+    "clientImage": "_bb/bb-mosaic.svg",
+    "clientLogo": "_bb/bb-logo.svg"
 }

@@ -1,16 +1,22 @@
 ## Installation
 
-Install .net version manager (DNVM)
-`curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh`
+Install .net core for Mac
+https://www.microsoft.com/net/core#macos
 
-Command line will then give you a command to type in, e.g.
-`"Type 'source /Users/andy/.dnx/dnvm/dnvm.sh' to start using dnvm"`
+after this you should be able to run
+`dotnet`
+from the terminal successfully
 
-Install DNX for .net core
-`dnvm upgrade -r coreclr`
+clone the repository
+`git clone git@github.com:buildingblocks/bb-prototype-website-razor.git`
 
-Get required .net packages
-`DNU restore`
+`cd site`
+
+restore dependencies for .net core
+`dotnet restore`
+
+run the site
+`dotnet run`
 
 run npm to get front end packages
 `npm install`
@@ -18,6 +24,3 @@ run npm to get front end packages
 Run grunt to build solution and start localhost
 `grunt`
 
-Further details
-https://docs.asp.net/en/latest/getting-started/installing-on-mac.html
-## Installation

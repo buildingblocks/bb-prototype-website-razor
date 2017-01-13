@@ -17,10 +17,3 @@ restore dependencies for .net core
 
 run the site
 `dotnet run`
-
-run npm to get front end packages
-`npm install`
-
-Run grunt to build solution and start localhost
-`grunt`
-

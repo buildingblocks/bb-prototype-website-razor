@@ -27,7 +27,7 @@ namespace bb_prototype_website_razor
             {
                 FileProvider = new PhysicalFileProvider(
                     Path.Combine(Directory.GetCurrentDirectory(), @"dist")),
-                RequestPath = new PathString("")
+                RequestPath = new PathString(string.Empty)
             });
 
             loggerFactory.AddConsole();
@@ -45,8 +45,12 @@ namespace bb_prototype_website_razor
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Pages}/{action=Index}/{id?}");
+                    template: "{*url}",
+                    defaults: new { controller = "Pages", action = "Index" }
+                    );
             });
+
+            //"{*.}",new { controller = "PublicDisplay", action = "Error404" }
 
             if (env.IsDevelopment())
             {

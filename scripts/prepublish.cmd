@@ -1,3 +1,2 @@
 echo -- -- prepublish -- --
-cd ../
 gulp

@@ -20,4 +20,4 @@ Run grunt to build solution and start localhost
 
 Further details
 https://docs.asp.net/en/latest/getting-started/installing-on-mac.html
-https://docs.asp.net/en/latest/tutorials/your-first-mac-aspnet.html
+## Installation

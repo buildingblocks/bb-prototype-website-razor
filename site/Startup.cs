@@ -21,7 +21,6 @@ namespace bb_prototype_website_razor
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole();
-            
 
             if (env.IsDevelopment())
             {
@@ -43,11 +42,6 @@ namespace bb_prototype_website_razor
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
         }
     }
 }

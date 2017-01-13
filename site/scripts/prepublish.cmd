@@ -1,0 +1,3 @@
+echo -- -- prepublish -- --
+cd ../
+gulp

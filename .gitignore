@@ -1,12 +1,45 @@
-.sass-cache
-.tmp
-.suo
-.user
+# debugging
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.yo-rc.json
+pids
+logs
+results
+
+# OS
+.DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# project meta
+*.sublime-workspace
+
+# installed components
+bower_components
 node_modules
+
+# generated components
+dist
+test/results
+FRONTEND.md
+TODO.md
+_combined.less
+
+# Razor .Net Core
+
 packages
 bb-prototype-website-razor/bower_components
 bb-prototype-website-razor/bin
 bb-prototype-website-razor/obj
 bower_components/
 wwwroot/
-.vs/
+

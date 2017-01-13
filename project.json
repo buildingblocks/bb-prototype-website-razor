@@ -13,7 +13,8 @@
     "Microsoft.Extensions.Logging.Console": "1.1.0",
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
     "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
-    "Microsoft.Extensions.Configuration.CommandLine": "1.1.0"
+    "Microsoft.Extensions.Configuration.CommandLine": "1.1.0",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0"
   },
 
   "tools": {
@@ -42,6 +43,10 @@
 
   "publishOptions": {
     "include": [
+      "dist/_bb",
+      "dist/_scripts",
+      "dist/_styes",
+      "dist/images",
       "wwwroot",
       "web.config"
     ]

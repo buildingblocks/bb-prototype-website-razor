@@ -46,11 +46,10 @@
       "web.config"
     ]
   },
-
   "scripts": {
-    "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
+    "precompile": "scripts/precompile.cmd",
+    "prepublish": "scripts/prepublish.cmd"
   },
-
   "tooling": {
     "defaultNamespace": "bb_prototype_website_razor"
   }

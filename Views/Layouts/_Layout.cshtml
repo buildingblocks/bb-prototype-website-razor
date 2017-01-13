@@ -12,10 +12,8 @@
 
 }
 
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js ie8 lt-ie10 lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if IE 9]><html class="no-js ie9 lt-ie10" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
+<!doctype html>
+<html lang="en" class="no-js">
     <head>
 
         @Html.Partial("~/Views/Components/head/head.cshtml")
@@ -25,11 +23,11 @@
         @Html.Partial("~/Views/Components/header/header.cshtml")
 
         <div id="page" class="page @ViewBag.pageClass">
-            <main class="main" id="main" role="main">
+            <main class="main" id="main">
                 @RenderSection("FullWidthA", required: false)
 
-                <div class="layout layout-a">
-                    <div class="region region-a">
+                <div class="layout layout--a">
+                    <div class="region region--a">
                         <div class="region-inner">
                             @RenderSection("RegionA", required: false)
                         </div>

@@ -1,4 +1,29 @@
+<<!-- jQuery -->>
+<script src="/_scripts/jquery.min.js"></script>
+<<!-- Validation Scripts -->>
+<script src="/_scripts/validation.js"></script>
 
-<script src="/_scripts/jquery.js"></script>
-<script src="/_scripts/validation.js" asp-append-version="true"></script>
-<script src="/_scripts/scripts.js" asp-append-version="true"></script>
+<<!-- Our scripts -->>
+<script>
+	function getParameterByName(name) {
+	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	        results = regex.exec(location.search);
+	    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
+	var debugQS = getParameterByName('debug');
+	var script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = '/_scripts/scripts.min.js';
+
+	if (debugQS && debugQS.length > 0) {
+		if (debugQS === 'true') {
+			script.src = '/_scripts/scripts.js';
+		}
+	}
+
+	document.body.appendChild(script);
+</script>
+
+<script src="/_scripts/scripts.js"></script>

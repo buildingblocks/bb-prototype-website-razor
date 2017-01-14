@@ -11,7 +11,7 @@
 			},
 			"body": {
 				"tag": {
-					"urlText":"Policy report",
+					"urlText":"Tag",
 					"icon" : "icon-tag",
 					"url" : "#"
 				},
@@ -28,7 +28,7 @@
 			"equalHeight": true,
 			"body": {
 				"tag": {
-					"urlText":"Policy report",
+					"urlText":"Tag",
 					"icon" : "icon-tag",
 					"url" : "#"
 				},
@@ -51,7 +51,7 @@
 			},
 			"body": {
 				"tag": {
-					"urlText":"Policy report",
+					"urlText":"Tag",
 					"icon" : "icon-tag",
 					"url" : "#"
 				},
@@ -74,7 +74,7 @@
 			},
 			"body": {
 				"tag": {
-					"urlText":"Policy report",
+					"urlText":"Tag",
 					"icon" : "icon-tag",
 					"url" : "#"
 				},
@@ -98,7 +98,7 @@
 			},
 			"body": {
 				"tag": {
-					"urlText":"Policy report",
+					"urlText":"Tag",
 					"icon" : "icon-tag",
 					"url" : "#"
 				},
@@ -116,7 +116,7 @@
 			"equalHeight": true,
 			"body": {
 				"tag": {
-					"urlText":"Policy report",
+					"urlText":"Tag",
 					"icon" : "icon-tag",
 					"url" : "#"
 				},
@@ -140,7 +140,7 @@
 			},
 			"body": {
 				"tag": {
-					"urlText":"Policy report",
+					"urlText":"Tag",
 					"icon" : "icon-tag",
 					"url" : "#"
 				},
@@ -163,7 +163,7 @@
 			},
 			"body": {
 				"tag": {
-					"urlText":"Policy report",
+					"urlText":"Tag",
 					"icon" : "icon-tag",
 					"url" : "#"
 				},
@@ -180,7 +180,7 @@
 			"equalHeight": true,
 			"body": {
 				"tag": {
-					"urlText":"Policy report",
+					"urlText":"Tag",
 					"icon" : "icon-tag",
 					"url" : "#"
 				},

@@ -1,6 +1,3 @@
-@using bb_prototype_website_razor.Controllers
-@using bb_prototype_website_razor.Extensions
-@using bb_prototype_website_razor.ViewComponents
 @{
     ViewBag.visibleGrid = true;
     ViewBag.visibleBreakpoints = true;
@@ -12,18 +9,15 @@
 
 @section RegionA {
     <h2>Region A</h2>
-    @(await Component.InvokeAsync(typeof(JsonModelDrivenViewComponent), new
-    {
-        viewName = "~/Views/Components/content-cards/content-cards.cshtml",
-        componentPath = "content-cards.contentCards.blockA"
-    }))
+
     @Component.Render( viewName : "~/Views/Components/content-cards/content-cards.cshtml", 
                        componentPath : "content-cards.contentCards.blockA")
 
-    @await Component.InvokeAsync(typeof(PriorityList), new { maxPriorty = 1, isDone = false})
+    @Component.Render(viewName: "~/Views/Components/content-cards/content-cards.cshtml",
+                       componentPath: "content-cards.contentCards.blockC")
 
-    @await Component.InvokeAsync(typeof(JsonModelDrivenViewComponent), 
-                        new { viewName = "~/Views/Components/basic.cshtml" })
+    @Component.Render(viewName: "~/Views/Components/content-cards/content-cards.cshtml",
+                       componentPath: "content-cards.contentCards.blockE")
 }
 
 

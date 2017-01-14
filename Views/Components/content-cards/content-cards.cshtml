@@ -1,6 +1,6 @@
 @using bb_prototype_website_razor.Extensions
 @model dynamic
-<article class="block-content-card @(Html.Exists("class") ? Model.@class:string.Empty)" @(Model.equalHeight ? "data-equal-height=\"true\"":string.Empty)>
+<article class="block-content-card @(Html.Exists("class") ? Model.@class:string.Empty)" @(Html.Exists("equalHeight") ? ((bool)Model.equalHeight ? "data-equal-height=\"true\"":string.Empty):string.Empty)>
     @if (Html.Exists("date"))
     {
         <div class="event-card-ribbon">
@@ -28,7 +28,7 @@
                 if (Html.Exists("body.tag"))
                 {
                     <span class="tag">
-                        <i aria-hidden="true" class="icon @Model.tag.icon"></i> @Model.tag.urlText
+                        <i aria-hidden="true" class="icon @Model.body.tag.icon"></i> @Model.body.tag.urlText
                     </span>
                 }
             }

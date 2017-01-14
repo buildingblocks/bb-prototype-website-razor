@@ -16,6 +16,9 @@ namespace bb_prototype_website_razor
         {
             services.AddOptions();
             services.AddMvc();
+            services.AddRouting(x => {
+                x.LowercaseUrls = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

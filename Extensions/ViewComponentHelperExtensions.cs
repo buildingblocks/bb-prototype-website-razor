@@ -13,9 +13,9 @@ namespace bb_prototype_website_razor.Extensions
 {
     public static class ViewComponentHelperExtensions
     {
-        public static Task<IHtmlContent> Render(this IViewComponentHelper helper, string viewName, string componentPath)
+        public static IHtmlContent Render(this IViewComponentHelper helper, string viewName, string componentPath)
         {
-            return helper.InvokeAsync(typeof(JsonModelDrivenViewComponent), new { viewName, componentPath });
+            return helper.InvokeAsync(typeof(JsonModelDrivenViewComponent), new { viewName, componentPath }).Result;
         }
     }
 }

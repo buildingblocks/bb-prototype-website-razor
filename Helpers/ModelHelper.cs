@@ -1,5 +1,7 @@
+using System;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using System.Reflection;
 
 namespace Helpers
 {
@@ -12,8 +14,20 @@ namespace Helpers
             return JObject.Parse(File.ReadAllText(_modelPath + JSONFile));
         }
 
-        public static bool Exists(dynamic Object, string property) {
-            return Object.GetType().GetProperty(property) != null;
+        public static dynamic GetModel(string JSONFile, string path)
+        {
+            var model = JObject.Parse(File.ReadAllText(_modelPath + JSONFile));
+            return model.SelectToken(path);
+        }
+
+        //public static bool Exists(dynamic dynamicObject, string property) {
+        //    return dynamicObject.GetType().GetProperty(property) != null;
+        //}
+
+        public static bool Exists(dynamic dynamicObject, string path)
+        {
+            JObject jsonObject = JObject.FromObject(dynamicObject);
+            return jsonObject.SelectToken(path) != null;
         }
     }
 }

@@ -1,0 +1,60 @@
+@using bb_prototype_website_razor.Extensions
+@model dynamic
+<article class="block-content-card @(Html.Exists("class") ? Model.@class:string.Empty)" @(Model.equalHeight ? "data-equal-height=\"true\"":string.Empty)>
+    @if (Html.Exists("date"))
+    {
+        <div class="event-card-ribbon">
+            <div class="event-card-ribbon-label">
+                <div class="event-card-ribbon-label--inner">
+                    @Model.date
+                </div>
+            </div>
+        </div>
+    }
+    
+    @if (Html.Exists("image"))
+    {
+        <a href="">
+            <figure class="block-content-card-image">
+                <img src="@Model.image.medium.src" alt="@Model.image.alt" />
+            </figure>
+        </a>
+    }
+    
+    <div class="block-content-card-details">
+        <div class="block-content-card-body">
+            @if (Html.Exists("body"))
+            {
+                if (Html.Exists("body.tag"))
+                {
+                    <span class="tag">
+                        <i aria-hidden="true" class="icon @Model.tag.icon"></i> @Model.tag.urlText
+                    </span>
+                }
+            }
+          
+            @if (Html.Exists("body.title"))
+            {
+                <h2 class="title">
+                    <a href="#">@Model.body.title</a>
+                </h2>
+            }
+            
+            @if (Html.Exists("location"))
+            {
+                <p class="location">
+                    <i class="ss-icon ss-location" aria-hidden="true"></i><span>@Model.location</span>
+                </p>
+            }
+            
+            @if (Html.Exists("body.copy"))
+            {
+                @Model.body.copy   
+            }
+        </div>
+    </div>
+    @if (Html.Exists("url"))
+    {
+        <a class="@Model.btnClass" href="@Model.url">@Model.urlText</a>
+    }
+</article>

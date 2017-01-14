@@ -1,0 +1,364 @@
+{
+	"contentCards" : {
+		"blockA": {
+			"class": "card-span-three tile-style-a",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"tag": {
+					"urlText":"Policy report",
+					"icon" : "icon-tag",
+					"url" : "#"
+				},
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam unde hic mollitia.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action"
+		},
+		"blockB": {
+			"class": "card-span-three tile-style-a card-style-b",
+			"equalHeight": true,
+			"body": {
+				"tag": {
+					"urlText":"Policy report",
+					"icon" : "icon-tag",
+					"url" : "#"
+				},
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nisi maiores possimus, molestias dicta deleniti?</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action"
+		},
+		"blockC": {
+			"class": "card-span-three tile-style-a",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"tag": {
+					"urlText":"Policy report",
+					"icon" : "icon-tag",
+					"url" : "#"
+				},
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. At.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action"
+		},
+		"blockD": {
+			"class": "card-span-three tile-style-a card-style-b",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"tag": {
+					"urlText":"Policy report",
+					"icon" : "icon-tag",
+					"url" : "#"
+				},
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eius quis, quasi.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action"
+		}
+		,
+		"blockE": {
+			"class": "card-span-four tile-style-b",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"tag": {
+					"urlText":"Policy report",
+					"icon" : "icon-tag",
+					"url" : "#"
+				},
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action"
+		}
+		,
+		"blockF": {
+			"class": "card-span-four tile-style-b card-style-b",
+			"equalHeight": true,
+			"body": {
+				"tag": {
+					"urlText":"Policy report",
+					"icon" : "icon-tag",
+					"url" : "#"
+				},
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quam nemo? Magni, dolor sapiente minima.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action"
+		}
+		,
+		"blockG": {
+			"class": "card-span-four tile-style-b",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"tag": {
+					"urlText":"Policy report",
+					"icon" : "icon-tag",
+					"url" : "#"
+				},
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action"
+		},
+		"blockH": {
+			"class": "card-span-six tile-style-b",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/636x300.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"tag": {
+					"urlText":"Policy report",
+					"icon" : "icon-tag",
+					"url" : "#"
+				},
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, dicta.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action"
+		},
+		"blockI": {
+			"class": "card-span-six tile-style-b card-style-b",
+			"equalHeight": true,
+			"body": {
+				"tag": {
+					"urlText":"Policy report",
+					"icon" : "icon-tag",
+					"url" : "#"
+				},
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action"
+		}
+	},
+	"eventCards" : {
+		"blockA": {
+			"class": "event-card card-span-three tile-style-a",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam unde hic mollitia.</p>"
+			},
+			"url":"#",
+			"urlText":"more info something else wow",
+			"btnClass" : "more-action",
+			"date" : "<div class='event-card--date'><span class='event-card--date__large'>28-23 </span><br>Feb / Mar</div>",
+			"location" : "Location lorem ipsum dolor"
+		},
+		"blockB": {
+			"class": "event-card event-card__noimage card-span-three tile-style-a card-style-b",
+			"equalHeight": true,
+			"body": {
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nisi maiores possimus, molestias dicta deleniti?</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action",
+			"date" : "<div class='event-card--date'>Wed <br><span class='event-card--date__large'>21 </span>Aug</div>",
+			"location" : "Location lorem ipsum dolor"
+		},
+		"blockC": {
+			"class": "event-card card-span-three tile-style-a",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. At.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action",
+			"date" : "<div class='event-card--date'><span class='event-card--date__large'>28-23 </span><br>Feb / Mar</div>",
+			"location" : "Location lorem ipsum dolor"
+
+		},
+		"blockD": {
+			"class": "event-card card-span-three tile-style-a card-style-b",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eius quis, quasi.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action",
+			"date" : "<div class='event-card--date'><span class='event-card--date__large'>28-23 </span><br>Feb / Mar</div>",
+			"location" : "Location lorem ipsum dolor"
+		}
+		,
+		"blockE": {
+			"class": "event-card card-span-four tile-style-b",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action",
+			"date" : "<div class='event-card--date'><span class='event-card--date__large'>28-23 </span><br>Feb / Mar</div>",
+			"location" : "Location lorem ipsum dolor"
+		}
+		,
+		"blockF": {
+			"class": "event-card event-card__noimage card-span-four tile-style-b card-style-b",
+			"equalHeight": true,
+			"body": {
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, quam nemo? Magni, dolor sapiente minima.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action",
+			"date" : "<div class='event-card--date'>Wed <br><span class='event-card--date__large'>21 </span>Aug</div>",
+			"location" : "Location lorem ipsum dolor"
+		}
+		,
+		"blockG": {
+			"class": "event-card card-span-four tile-style-b",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/424x272.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action",
+			"date" : "<div class='event-card--date'><span class='event-card--date__large'>28-23 </span><br>Feb / Mar</div>",
+			"location" : "Location lorem ipsum dolor"
+		},
+		"blockH": {
+			"class": "event-card card-span-six tile-style-b",
+			"equalHeight": true,
+			"image": {
+				"medium": {
+					"src": "_images/tmp/636x300.png"
+				},
+				"alt": "Block Image"
+			},
+			"body": {
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, dicta.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action",
+			"date" : "<div class='event-card--date'><span class='event-card--date__large'>28-23 </span><br>Feb / Mar</div>",
+			"location" : "Location lorem ipsum dolor"
+		},
+		"blockI": {
+			"class": "event-card event-card__noimage card-span-six tile-style-b card-style-b",
+			"equalHeight": true,
+			"body": {
+				"title": "Card title lorem ipsum dolor sit amet",
+				"subTitle":"Secondary title",
+				"copy":"<p>This is normal body copy, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et.</p>"
+			},
+			"url":"#",
+			"urlText":"more info",
+			"btnClass" : "more-action",
+			"date" : "<div class='event-card--date'><span class='event-card--date__large'>28-23 </span><br>Feb / Mar</div>",
+			"location" : "Location lorem ipsum dolor"
+		}
+	}
+}

@@ -49,7 +49,7 @@
             
             @if (Html.Exists("body.copy"))
             {
-                @Model.body.copy   
+                @Html.Raw(Model.body.copy)   
             }
         </div>
     </div>

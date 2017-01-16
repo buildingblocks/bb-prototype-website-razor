@@ -5,7 +5,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -45,7 +45,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -68,7 +68,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -92,7 +92,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -134,7 +134,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -157,7 +157,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/636x300.png"
+					"src": "http://lorempixel.com/636/300"
 				},
 				"alt": "Block Image"
 			},
@@ -199,7 +199,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -233,7 +233,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -254,7 +254,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -275,7 +275,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -311,7 +311,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/424x272.png"
+					"src": "http://lorempixel.com/424/272"
 				},
 				"alt": "Block Image"
 			},
@@ -331,7 +331,7 @@
 			"equalHeight": true,
 			"image": {
 				"medium": {
-					"src": "_images/tmp/636x300.png"
+					"src": "http://lorempixel.com/636/300"
 				},
 				"alt": "Block Image"
 			},

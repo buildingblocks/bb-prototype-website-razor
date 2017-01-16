@@ -52,8 +52,7 @@
     ]
   },
   "scripts": {
-    "precompile": "npm install",
-    "prepublish": "gulp"
+    "precompile": ["npm install","gulp"]
   },
   "tooling": {
     "defaultNamespace": "bb_prototype_website_razor"

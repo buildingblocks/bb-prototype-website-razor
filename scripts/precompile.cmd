@@ -1,2 +1,0 @@
-echo -- -- precompile -- --
-npm install

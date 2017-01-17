@@ -12,8 +12,11 @@ namespace bb_prototype_website_razor
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Starting - Main - bb_prototype_website_razor");
+
            var config = new ConfigurationBuilder()
-                .AddCommandLine(args)
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("hosting.json", optional: true)
                 .AddEnvironmentVariables(prefix: "ASPNETCORE_")
                 .Build();
 

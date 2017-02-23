@@ -1,48 +1,39 @@
-
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
-using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Mvc.Razor;
-using Microsoft.Extensions.Configuration;
+using System.IO;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 
 namespace bb_prototype_website_razor
 {
     public class Startup
     {
-        public Startup(IHostingEnvironment env)
-        {
-            // Set up configuration sources.
-            var builder = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .AddEnvironmentVariables();
-            Configuration = builder.Build();
-        }
-
-        public IConfigurationRoot Configuration { get; set; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            // Add framework services.
+            services.AddOptions();
             services.AddMvc();
-            services.Configure<RazorViewEngineOptions>(options =>
-            {
-                var expander = new LayoutLocationExpander();
-                options.ViewLocationExpanders.Add(expander);
+            services.AddRouting(x => {
+                x.LowercaseUrls = true;
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
+            app.UseStaticFiles();
+
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), @"dist")),
+                RequestPath = new PathString(string.Empty)
+            });
+
+            loggerFactory.AddConsole();
 
             if (env.IsDevelopment())
             {
@@ -53,19 +44,21 @@ namespace bb_prototype_website_razor
                 app.UseExceptionHandler("/Layouts/Error");
             }
 
-            app.UseIISPlatformHandler();
-
-            app.UseStaticFiles();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Pages}/{action=Index}/{id?}");
+                    template: "{*url}",
+                    defaults: new { controller = "Pages", action = "Index" }
+                    );
             });
-        }
 
-        // Entry point for the application.
-        public static void Main(string[] args) => Microsoft.AspNet.Hosting.WebApplication.Run<Startup>(args);
+            //"{*.}",new { controller = "PublicDisplay", action = "Error404" }
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+        }
     }
 }

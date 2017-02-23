@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
 
 namespace bb_prototype_website_razor.Controllers
 {
@@ -10,32 +8,16 @@ namespace bb_prototype_website_razor.Controllers
     {
         public IActionResult Index()
         {
-            return View("~/Views/Pages/Index.cshtml");
-        }
+            var pagePath = "~/Views/";
 
-        public IActionResult LayoutA()
-        {
-            return View();
-        }
+            var path = Request.Path;
 
-        public IActionResult LayoutB()
-        {
-            return View();
-        }
+            if (path == "/")
+            {
+                return View("~/Views/Pages/Index.cshtml");
+            }
 
-        public IActionResult Grid()
-        {
-            return View();
-        }
-
-        public IActionResult Styleguide()
-        {
-            return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View();
+            return View(pagePath + path.Value.ToLower() + ".cshtml");
         }
     }
 }

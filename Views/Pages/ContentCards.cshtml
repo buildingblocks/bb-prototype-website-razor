@@ -1,0 +1,24 @@
+@{
+    ViewBag.visibleGrid = true;
+    ViewBag.visibleBreakpoints = true;
+}
+
+@section FullWidthA {
+	<h1>Content Card</h1>
+}
+
+@section RegionA {
+    <h2>Region A</h2>
+
+    @Component.Render( viewName : "~/Views/Components/content-cards/content-cards.cshtml", 
+                       componentPath : "content-cards.contentCards.blockA")
+
+    @Component.Render(viewName: "~/Views/Components/content-cards/content-cards.cshtml",
+                       componentPath: "content-cards.contentCards.blockC")
+
+    @Component.Render(viewName: "~/Views/Components/content-cards/content-cards.cshtml",
+                       componentPath: "content-cards.contentCards.blockE")
+}
+
+
+

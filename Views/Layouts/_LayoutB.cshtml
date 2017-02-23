@@ -25,21 +25,21 @@
         @Html.Partial("~/Views/Components/header/header.cshtml")
 
         <div id="page" class="page @ViewBag.pageClass">
-            <main class="main" id="main" role="main">
+            <main class="main" id="main">
                 @RenderSection("FullWidthA", required: false)
 
-                <div class="layout layout-b">
-                    <div class="region region-a">
+                <div class="layout layout--b">
+                    <div class="region region--a">
                         <div class="region-inner">
                             @RenderSection("RegionA", required: false)
                         </div>
                     </div>
-                    <div class="region region-b">
+                    <div class="region region--b">
                         <div class="region-inner">
                             @RenderSection("RegionB", required: false)
                         </div>
                     </div>
-                    <div class="region region-c">
+                    <div class="region region--c">
                         <div class="region-inner">
                             @RenderSection("RegionC", required: false)
                         </div>

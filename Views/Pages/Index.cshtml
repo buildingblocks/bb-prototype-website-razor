@@ -2,10 +2,10 @@
     ViewBag.visibleGrid = false;
     ViewBag.visibleBreakpoints = false;
     Layout = "~/Views/Layouts/bb.cshtml";
-    var json = Helpers.ModelHelper.GetModel("project.json");
+    var json = Helpers.ModelHelper.GetModel("global.json");
 }
 
-<div class="main" id="main" role="main">
+<div class="main" id="main">
 
 	<div class="client-image" style="background-image: url(@json.clientImage); background-size: cover; background-position: center;">
 		<img class="client-logo" src="@json.clientLogo" alt="Client Logo" height="50" />

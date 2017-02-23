@@ -138,13 +138,19 @@
 				</div>
 				<div class="controls">
 					<label class="checkbox control-inline" for="inlineCheckbox1" >
-						<input type="checkbox" name="inlineCheckbox1" id="inlineCheckbox1" value="option1"/> Email
+						<input type="checkbox" name="inlineCheckbox1" id="inlineCheckbox1" value="option1"/>
+                        <label class="checkbox-check" for="inlineCheckbox1" role="presentation"></label>
+                        Email
 					</label>
 					<label class="checkbox control-inline">
-						<input type="checkbox" name="inlineCheckbox2" id="inlineCheckbox2" value="option2" /> Post
+						<input type="checkbox" name="inlineCheckbox2" id="inlineCheckbox2" value="option2" />
+                        <label class="checkbox-check" for="inlineCheckbox2" role="presentation"></label>
+                        Post
 					</label>
 					<label class="checkbox control-inline">
-						<input type="checkbox" name="inlineCheckbox3" id="inlineCheckbox3" value="option3" /> SMS
+						<input type="checkbox" name="inlineCheckbox3" id="inlineCheckbox3" value="option3" />
+                        <label class="checkbox-check" for="inlineCheckbox3" role="presentation"></label>
+                        SMS
 					</label>
 				</div>
 			</div>
@@ -155,23 +161,28 @@
 				<div class="controls">
 					<label class="checkbox">
 						<input type="checkbox" value="option1" name="optionsCheckboxList" id="optionsCheckboxList1" data-val="true" data-val-atleast="Select at least {0} options" data-val-atleast-minimum="2" />
-						Option one can be checked and included in form results
+						<label class="checkbox-check" for="optionsCheckboxList1" role="presentation"></label>
+                        Option one can be checked and included in form results
 					</label>
 					<label class="checkbox">
 						<input type="checkbox" value="option2" name="optionsCheckboxList" id="optionsCheckboxList2" />
-						Option two can also be checked and included in form results
+						<label class="checkbox-check" for="optionsCheckboxList2" role="presentation"></label>
+                        Option two can also be checked and included in form results
 					</label>
 					<label class="checkbox">
 						<input type="checkbox" value="option3" name="optionsCheckboxList" id="optionsCheckboxList3" />
-						Option three can also be checked and included in form results
+						<label class="checkbox-check" for="optionsCheckboxList3" role="presentation"></label>
+                        Option three can also be checked and included in form results
 					</label>
 					<label class="checkbox disabled">
 						<input type="checkbox" value="option3" name="optionsCheckboxList" id="optionsCheckboxList4" disabled />
-						Option disabled
+						<label class="checkbox-check" for="optionsCheckboxList4" role="presentation"></label>
+                        Option disabled
 					</label>
 					<label class="checkbox disabled">
 						<input type="checkbox" value="option3" name="optionsCheckboxList" id="optionsCheckboxList5" disabled checked />
-						Option disabled and checked
+						<label class="checkbox-check" for="optionsCheckboxList5" role="presentation"></label>
+                        Option disabled and checked
 					</label>
 					<span class="field-validation-message field-validation-valid" data-valmsg-for="optionsCheckboxList" data-valmsg-replace="true"></span>
 					<p class="help-block"><strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.</p>
@@ -250,7 +261,9 @@
 			<div class="control-group control-group-odd">
 				<div class="controls">
 					<label class="checkbox control-inline" for="requiredCheckbox1">
-						<input type="checkbox" name="requiredCheckbox1" id="requiredCheckbox1" value="1" data-val="true" data-val-checked="A mandatory checkbox input" /> By ticking this box you agree to the <a href="#">terms and conditions</a>
+						<input type="checkbox" name="requiredCheckbox1" id="requiredCheckbox1" value="1" data-val="true" data-val-checked="A mandatory checkbox input" />
+                        <label class="checkbox-check" for="requiredCheckbox1" role="presentation"></label>
+                        By ticking this box you agree to the <a href="#">terms and conditions</a>
 					</label>
 					<span class="field-validation-message field-validation-valid" data-valmsg-for="requiredCheckbox1" data-valmsg-replace="true"></span>
 				</div>

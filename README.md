@@ -15,5 +15,8 @@ clone the repository
 restore dependencies for .net core
 `dotnet restore`
 
+install node modules
+`npm i`
+
 run the site
-`dotnet run`
+`gulp`

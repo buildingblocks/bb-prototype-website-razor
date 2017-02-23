@@ -41,6 +41,6 @@ var bb = bb ? bb : {};
 		}
 	});
 	$.subscribe('pageReady ajaxLoaded', function() {
-		bb.replaceCheckbox.init();
+		// bb.replaceCheckbox.init();
 	});
 }(jQuery));

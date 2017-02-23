@@ -1,6 +1,8 @@
 # Authors
 
 * [Building Blocks](https://github.com/buildingblocks)
-* [Paul Welsh](https://github.com/spacedawwwg)
-* [John Cashmore](https://github.com/JohnCashmore)
-* [Daniel Furze](https://github.com/furzeface)
+* [Jordan Robinson](jtrain@building-blocks.com)
+* [Chris Eccles](c.eccles@building-blocks.com)
+* [Rob Stevenson-Leggett](r.leggett@building-blocks.com)
+* [Richie Coss](r.coss@building-blocks.com)
+* [Andy Blackledge](https://github.com/ablackledge)

@@ -159,7 +159,7 @@ input[type='checkbox'] {
 		margin-top: 0;
 	}
 
-	.checkbox-replace,
+	.checkbox-check,
 	.radio-replace {
 		position: absolute;
 		top: 7px;
@@ -209,12 +209,13 @@ input[type='checkbox'] {
 	}
 }
 
-.checkbox-replace-input,
+// .checkbox-replace-input,
+input[type='checkbox'],
 .radio-replace-input {
 	@include visually-hidden;
 }
 
-.checkbox-replace,
+.checkbox-check,
 .radio-replace {
 	@include size($vr*4);
 
@@ -262,7 +263,7 @@ input[type='checkbox'] {
 	}
 }
 
-.checkbox-replace {
+.checkbox-check {
 	border-radius: 2px;
 
 	&:after {

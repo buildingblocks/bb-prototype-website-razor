@@ -4,7 +4,7 @@
 <ul class="file-list">
 	@foreach(var fileName in Directory.GetFiles("Views/Pages/").Select(System.IO.Path.GetFileNameWithoutExtension).Where(x => !x.Equals("Index") && !x.Equals("Styleguide"))) {
 		<li class="file">
-			<a href="/Pages/@fileName">@fileName</a>
+			<a href="/Pages/@fileName?debug=true">@fileName</a>
 		</li>
 	}
 </ul>

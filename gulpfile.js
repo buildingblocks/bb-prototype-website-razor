@@ -6,8 +6,8 @@ var wrench = require('wrench');
 var del = require('del');
 var environments = require('gulp-environments');
 var gutil = require('gulp-util');
-var connect = require('gulp-connect');
 var livereload = require('gulp-livereload');
+var shell = require('gulp-shell');
 
 var config = require('./gulp/config');
 
@@ -15,11 +15,9 @@ var config = require('./gulp/config');
 var build = function(callback) {
     runSequence(
         'clean:everything',
-        'markup',
         'styles',
         'scripts',
         'assets',
-        'pagelist',
         callback
     );
 };
@@ -27,12 +25,10 @@ var build = function(callback) {
 var prodBuild = function(callback) {
     runSequence(
         'clean:everything',
-        'markup',
         'styles',
         'minify-css',
         'scripts',
         'assets',
-        'pagelist',
         callback
     );
 };
@@ -64,6 +60,8 @@ gulp.task('production', function(callback) {
     prodBuild(callback);
 });
 
+
+
 // WATCH TASK
 gulp.task('watch', ['build'], function() {
     livereload.listen();
@@ -77,25 +75,12 @@ gulp.task('watch', ['build'], function() {
 });
 
 
-// SERVE TASK
-gulp.task('serve', ['watch'], function(callback) {
-    var open = require('open');
-    var serverPort = Math.floor((Math.random() * 1000) + 3000);
-    var localhost = 'http://localhost:' + serverPort;
+gulp.task('commandline', shell.task('dotnet run'));
 
-    connect.server({
-        host: 'localhost',
-        port: serverPort,
-        livereload: true,
-        root: config.basePaths.dist
-    });
-
-    open(localhost, 'google chrome');
-
-});
-
+gulp.task('razor_watch', ['commandline', 'watch']);
 /**
  *  Default task clean temporaries directories and launch the
  *  main optimization build task
  */
-gulp.task('default', ['build']);
+gulp.task('default', ['razor_watch']);
+

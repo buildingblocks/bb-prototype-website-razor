@@ -31,10 +31,9 @@
 	@extend %icon;
 }
 
-.icon-placeholder:before {
+.icon--placeholder:before {
 	content: '\f096';
 }
-
 
 .bb-icon {
 	font-family: 'bb-icon' !important;

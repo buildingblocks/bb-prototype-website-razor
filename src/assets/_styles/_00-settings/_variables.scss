@@ -2,19 +2,15 @@
 @function parseInt($str, $radix: 10) {
   $chars: charsFromBase($radix);
   $result: 0;
-
   $is-negative: str-index($str, '-') == 1;
-
   @if $is-negative {
     $str: str-slice($str, 2);
   }
-
   @for $i from 1 through str-length($str) {
     $char: str-slice($str, -$i, -$i);
     $value: str-index($chars, $char) - 1;
     $result: $result + ($value * pow($radix, ($i - 1)));
   }
-
   @return if($is-negative, -$result, $result);
 }
 
@@ -147,3 +143,12 @@ $BPD: "(min-width:" $break-point-d")";
 $BPE: "(min-width:" $break-point-e")";
 $BPF: "(min-width:" $break-point-f")";
 $BPG: "(min-width:" $break-point-g")";
+
+// For break point max shorthands
+$MaxBPA: "(max-width:" $break-point-a")";
+$MaxBPB: "(max-width: 479px)";
+$MaxBPC: "(max-width: 599px)";
+$MaxBPD: "(max-width: 767px)";
+$MaxBPE: "(max-width: 979px)";
+$MaxBPF: "(max-width: 1199px)";
+$MaxBPG: "(max-width: 1399px)";

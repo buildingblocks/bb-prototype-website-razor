@@ -39,7 +39,7 @@
 	}
 }
 
-.region-inner {
+.region__inner {
 	position: relative;
 }
 
@@ -154,9 +154,10 @@
 		float: left;
 		@include fluid-width($region-a-width, $max-width);
 
-		.region-inner{
+		.region__inner {
 			position: relative;
 			@include fluid-width($region-a-inner-width, $region-a-width);
+            height: 100%;
 		}
 
 		.block {
@@ -184,9 +185,10 @@
 		float: left;
 		@include fluid-width($region-b-width, $max-width);
 
-		.region-inner{
+		.region__inner{
 			position: relative;
 			@include fluid-width($region-b-inner-width, $region-b-width);
+            height: 100%;
 		}
 
 		.block {
@@ -215,9 +217,10 @@
 		margin: 0;
 		@include fluid-width($region-c-width, $max-width);
 
-		.region-inner{
+		.region__inner{
 			position: relative;
 			@include fluid-width($region-c-inner-width, $region-c-width);
+            height: 100%;
 		}
 
 		.block {

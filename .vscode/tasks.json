@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}\\project.json"
+                "${workspaceRoot}\\bb-prototype-website-razor.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"

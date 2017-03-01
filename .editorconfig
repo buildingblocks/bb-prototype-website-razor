@@ -12,3 +12,10 @@ insert_final_newline = true
 # Trailing whitespace is significant in markdown files.
 [*.md]
 trim_trailing_whitespace = false
+
+[*.cs]
+end_of_line = crlf
+indent_size = 4
+
+[*.cshtml]
+end_of_line = crlf

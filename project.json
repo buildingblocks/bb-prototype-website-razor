@@ -5,20 +5,23 @@
       "type": "platform"
     },
     "Microsoft.AspNetCore.Diagnostics": "1.1.0",
-    "Microsoft.Extensions.Configuration.Json": "1.1.0",
-    "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
-    "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
     "Microsoft.AspNetCore.Mvc": "1.1.0",
+		"Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.Design": "1.1.0-preview4-final",
+		"Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
+		"Microsoft.AspNetCore.StaticFiles": "1.0.0",
     "Microsoft.AspNetCore.Routing": "1.1.0",
     "Microsoft.Extensions.Logging.Console": "1.1.0",
+		"Microsoft.Extensions.Configuration.CommandLine": "1.1.0",
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.0",
     "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0",
-    "Microsoft.Extensions.Configuration.CommandLine": "1.1.0",
-    "Microsoft.AspNetCore.StaticFiles": "1.0.0"
+		"Microsoft.Extensions.Configuration.Json": "1.1.0"
   },
 
   "tools": {
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.1.0-preview4-final"
+		"Microsoft.DotNet.Watcher.Tools": "1.1.0-preview4-final",
+    "Microsoft.AspNetCore.Mvc.Razor.ViewCompilation.Tools": "1.1.0-preview4-final",
+		"Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.1.0-preview4-final"
   },
 
   "frameworks": {
@@ -43,17 +46,24 @@
 
   "publishOptions": {
     "include": [
+			"data",
       "dist/_bb",
       "dist/_scripts",
-      "dist/_styes",
+      "dist/_styles",
       "dist/images",
-      "wwwroot",
+      "Views",
       "web.config"
     ]
   },
+
   "scripts": {
-    "precompile": ["npm install"]
+		"prerestore": "npm i",
+    "postpublish": [
+			"dotnet razor-precompile --configuration %publish:Configuration% --framework %publish:TargetFramework% --output-path %publish:OutputPath% %publish:ProjectPath%",
+			"dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
+		]
   },
+
   "tooling": {
     "defaultNamespace": "bb_prototype_website_razor"
   }

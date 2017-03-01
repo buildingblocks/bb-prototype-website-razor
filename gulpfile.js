@@ -47,7 +47,6 @@ gulp.task('clean:everything', function() {
     return del('dist');
 });
 
-
 // DEV build
 gulp.task('build', function(callback) {
     environments.current(environments.development);
@@ -59,8 +58,6 @@ gulp.task('production', function(callback) {
     environments.current(environments.production);
     prodBuild(callback);
 });
-
-
 
 // WATCH TASK
 gulp.task('watch', ['build'], function() {
@@ -74,13 +71,20 @@ gulp.task('watch', ['build'], function() {
     ], ['build']);
 });
 
-
-gulp.task('commandline', shell.task('dotnet run'));
+gulp.task('commandline', shell.task([
+	'dotnet restore',
+	'dotnet watch run'
+]));
 
 gulp.task('razor_watch', ['commandline', 'watch']);
+
+gulp.task('deploy', ['production'], shell.task([
+	'dotnet restore',
+	'dotnet publish --output "' + gutil.env.dest + '" --configuration Release'
+]));
+
 /**
  *  Default task clean temporaries directories and launch the
  *  main optimization build task
  */
 gulp.task('default', ['razor_watch']);
-

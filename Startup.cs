@@ -24,8 +24,6 @@ namespace bb_prototype_website_razor
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            app.UseStaticFiles();
-
             app.UseStaticFiles(new StaticFileOptions()
             {
                 FileProvider = new PhysicalFileProvider(
@@ -35,14 +33,7 @@ namespace bb_prototype_website_razor
 
             loggerFactory.AddConsole();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Layouts/Error");
-            }
+			app.UseDeveloperExceptionPage();
 
             app.UseMvc(routes =>
             {
@@ -50,15 +41,8 @@ namespace bb_prototype_website_razor
                     name: "default",
                     template: "{*url}",
                     defaults: new { controller = "Pages", action = "Index" }
-                    );
+				);
             });
-
-            //"{*.}",new { controller = "PublicDisplay", action = "Error404" }
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
         }
     }
 }

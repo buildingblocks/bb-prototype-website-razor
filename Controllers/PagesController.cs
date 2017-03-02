@@ -1,6 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.IO;
-using System.Linq;
 
 namespace bb_prototype_website_razor.Controllers
 {

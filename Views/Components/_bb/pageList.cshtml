@@ -1,10 +1,14 @@
-@using System.IO;
+@using System.Threading.Tasks
+@using Models
+@model List<PageListing>
 
 <h2>Pages</h2>
 <ul class="file-list">
-	@foreach(var fileName in Directory.GetFiles("Views/Pages/").Select(System.IO.Path.GetFileNameWithoutExtension).Where(x => !x.Equals("Index") && !x.Equals("Styleguide"))) {
-		<li class="file">
-			<a href="/Pages/@fileName?debug=true">@fileName</a>
-		</li>
-	}
+    @foreach (var page in Model)
+    {
+        var link = "/pages/" + page.Filename.ToLower() + "?debug=true";
+        <li class="file">
+            <a href=@link>@page.Title</a>
+        </li>
+    }
 </ul>

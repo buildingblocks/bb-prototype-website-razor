@@ -22,7 +22,7 @@
             </header>
             <div class="content">
                 @Html.Partial("~/Views/Components/_bb/styleguideLink.cshtml")
-                @Html.Partial("~/Views/Components/_bb/pageList.cshtml")
+                @await Component.InvokeAsync("PageList", "listing.json")
             </div>
             <footer class="footer" role="contentinfo">
                 <p>&copy; Copyright @DateTime.Now.Year Building Blocks Ltd.</p>

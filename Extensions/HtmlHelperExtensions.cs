@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Helpers;
-using Microsoft.AspNetCore.Mvc;
+﻿using Helpers;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace bb_prototype_website_razor.Extensions
 {
@@ -14,6 +8,15 @@ namespace bb_prototype_website_razor.Extensions
         public static bool Exists(this IHtmlHelper<dynamic> helper, string propertyName)
         {
             return ModelHelper.Exists(helper.ViewData.Model, propertyName);
+        }
+
+        public static string If(this IHtmlHelper<dynamic> helper, string propertyName, string output)
+        {
+            if (ModelHelper.IsBooleanTrue(helper.ViewData.Model, propertyName))
+            {
+                return output;
+            }
+            return string.Empty;
         }
     }
 }

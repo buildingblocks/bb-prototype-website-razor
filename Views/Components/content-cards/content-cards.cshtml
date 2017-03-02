@@ -1,6 +1,7 @@
 @using bb_prototype_website_razor.Extensions
 @model dynamic
-<article class="block-content-card @(Html.Exists("class") ? Model.@class:string.Empty)" @(Html.Exists("equalHeight") ? ((bool)Model.equalHeight ? "data-equal-height=\"true\"":string.Empty):string.Empty)>
+<article class="block-content-card @(Html.Exists("class") ? Model.@class:string.Empty)" @Html.If("equalHeight", "data-equal-height=\"true\"")>
+
     @if (Html.Exists("date"))
     {
         <div class="event-card-ribbon">
@@ -11,7 +12,7 @@
             </div>
         </div>
     }
-    
+
     @if (Html.Exists("image"))
     {
         <a href="">
@@ -20,7 +21,7 @@
             </figure>
         </a>
     }
-    
+
     <div class="block-content-card-details">
         <div class="block-content-card-body">
             @if (Html.Exists("body"))
@@ -32,24 +33,24 @@
                     </span>
                 }
             }
-          
+
             @if (Html.Exists("body.title"))
             {
                 <h2 class="title">
                     <a href="#">@Model.body.title</a>
                 </h2>
             }
-            
+
             @if (Html.Exists("location"))
             {
                 <p class="location">
                     <i class="ss-icon ss-location" aria-hidden="true"></i><span>@Model.location</span>
                 </p>
             }
-            
+
             @if (Html.Exists("body.copy"))
             {
-                @Html.Raw(Model.body.copy)   
+                @Html.Raw(Model.body.copy)
             }
         </div>
     </div>

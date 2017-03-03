@@ -35,14 +35,7 @@ namespace bb_prototype_website_razor
 
 			app.UseDeveloperExceptionPage();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{*url}",
-                    defaults: new { controller = "Pages", action = "Index" }
-				);
-            });
+            app.UseMvc();
         }
     }
 }

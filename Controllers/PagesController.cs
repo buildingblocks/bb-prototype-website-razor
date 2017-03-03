@@ -4,18 +4,24 @@ namespace bb_prototype_website_razor.Controllers
 {
     public class PagesController : Controller
     {
+        [RouteAttribute("{*url}")]
         public IActionResult Index()
         {
-            var pagePath = "~/Views/";
-
+            //Root of the Views folder
+            var rootViewsPath = "~/Views/";
+            
+            //Get the path from the Request
             var path = Request.Path;
+            var viewPath = path.Value.ToLower() + ".cshtml";
 
+            //If this is home then map to the Pages
             if (path == "/")
             {
-                return View("~/Views/Pages/Index.cshtml");
+                viewPath = "/pages/index.cshtml";
             }
 
-            return View(pagePath + path.Value.ToLower() + ".cshtml");
+            //Return the view
+            return View(rootViewsPath + viewPath );
         }
     }
 }

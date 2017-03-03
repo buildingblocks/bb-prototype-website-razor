@@ -9,12 +9,12 @@ namespace Helpers
 
         public static dynamic GetModel(string JSONFile)
         {
-            return JObject.Parse(File.ReadAllText(_modelPath + JSONFile));
+            return GetJsonFile(JSONFile);
         }
 
         public static dynamic GetModel(string JSONFile, string path)
         {
-            var model = JObject.Parse(File.ReadAllText(_modelPath + JSONFile));
+            var model = GetJsonFile(JSONFile);
             return model.SelectToken(path);
         }
 
@@ -33,6 +33,10 @@ namespace Helpers
                 return property != null && property.Value;
             }
             return false;
+        }
+
+        private static dynamic GetJsonFile(string JSONFile){
+            return JObject.Parse(File.ReadAllText(_modelPath + JSONFile));
         }
     }
 }

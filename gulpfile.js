@@ -8,6 +8,7 @@ var environments = require('gulp-environments');
 var gutil = require('gulp-util');
 var livereload = require('gulp-livereload');
 var shell = require('gulp-shell');
+var rename = require('gulp-rename');
 
 var config = require('./gulp/config');
 
@@ -78,13 +79,32 @@ gulp.task('commandline', shell.task([
 
 gulp.task('razor_watch', ['commandline', 'watch']);
 
-gulp.task('deploy', ['production'], shell.task([
-	'dotnet restore',
-	'dotnet publish --output "' + gutil.env.dest + '" --configuration Release'
-]));
-
 /**
  *  Default task clean temporaries directories and launch the
  *  main optimization build task
  */
 gulp.task('default', ['razor_watch']);
+
+gulp.task('deploy', function(callback) {
+	runSequence(
+        'production',
+        'offline',
+        'dotnet_publish',
+        'online',
+        callback
+    );
+});
+
+gulp.task('offline', function() {
+	return gulp.src('./_app_offline.htm')
+		.pipe(rename('app_offline.htm'))
+		.pipe(gulp.dest(gutil.env.dest));
+});
+
+gulp.task('dotnet_publish', shell.task([
+	'dotnet restore',
+	'dotnet publish --output "' + gutil.env.dest + '" --configuration Release'
+]));
+
+// WARNING - Windows only...
+gulp.task('online', shell.task('del /q "' + gutil.env.dest + '\\app_offline.htm"'));

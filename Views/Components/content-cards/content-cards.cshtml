@@ -1,5 +1,4 @@
-@using bb_prototype_website_razor.Extensions
-@model dynamic
+﻿@model dynamic
 <article class="block-content-card @(Html.Exists("class") ? Model.@class:string.Empty)" @Html.If("equalHeight", "data-equal-height=\"true\"")>
 
     @if (Html.Exists("date"))

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26206.0
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bb-prototype-website-razor", "bb-prototype-website-razor.csproj", "{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bb-prototype-website-razor", "bb-prototype-website-razor.csproj", "{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,16 +17,16 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|x64.ActiveCfg = Debug|x64
-		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|x64.Build.0 = Debug|x64
-		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|x86.ActiveCfg = Debug|x86
-		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|x86.Build.0 = Debug|x86
+		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|x64.Build.0 = Debug|Any CPU
+		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Debug|x86.Build.0 = Debug|Any CPU
 		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|x64.ActiveCfg = Release|x64
-		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|x64.Build.0 = Release|x64
-		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|x86.ActiveCfg = Release|x86
-		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|x86.Build.0 = Release|x86
+		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|x64.ActiveCfg = Release|Any CPU
+		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|x64.Build.0 = Release|Any CPU
+		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|x86.ActiveCfg = Release|Any CPU
+		{CC2380BD-919C-45AB-91BA-33E7CAB30BBE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,6 +27,19 @@ Pages are defined in the Pages Views folder. This is mapped to URLs through a co
 
 /pages/contentcards will be mapped to the view /Views/Pages/ContentCards.cshtml
 
+## Component Content
+
+Components are defined in the /Views/Components folder.
+
+These can be rendered using the @Component.Render method. 
+
+JSON files in the data folder are available by convention for dummy data e.g.:
+
+     @Component.Render( viewName : "~/Views/Components/content-cards/content-cards.cshtml", 
+                       componentPath : "content-cards.contentCards.blockA")
+											 
+componentPath maps to a JSON file called content-cards.json which contains an object called contentCards with a property blockA which has the data for a content card.
+
 ## API Content
 
 To return JSON from the application json files can be placed in the api folder.

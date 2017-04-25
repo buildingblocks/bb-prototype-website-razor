@@ -1,4 +1,4 @@
-@{
+﻿@{
     ViewBag.visibleGrid = true;
     ViewBag.visibleBreakpoints = true;
 }
@@ -9,7 +9,7 @@
 
 @section RegionA {
 	<h2>Region A</h2>
-	@Helpers.ModelHelper.GetModel("example.json").title
+	@ModelHelper.GetModel("example.json").title
 	@Html.Partial("~/Views/Components/basic.cshtml")
 }
 

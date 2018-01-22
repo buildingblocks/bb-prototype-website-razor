@@ -49,7 +49,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
-    "jquery": "2.2.4",
+    "jquery": "^3.0.0",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
     "path": "^0.12.7",
